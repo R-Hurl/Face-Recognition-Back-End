@@ -8,6 +8,15 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+/*
+    I used Sql Server for my database connection. You can use any relational database supported
+    by knex. See https://knexjs.org/ for more info.
+
+    Also, if you choose not to use sql server, run npm uninstall mssql --save to uninstall from package.json file.
+
+    Replace the instance of knex() below with your database credentials. Refer to README document for recommended tables
+    and data types.
+*/
 const db = knex({
     client: 'mssql',
     connection: {
